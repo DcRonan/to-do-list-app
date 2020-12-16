@@ -1,4 +1,4 @@
 import '../css/style.css';
-import Project from './projects';
+import { formSubmit } from './projects';
 
-
+formSubmit()
