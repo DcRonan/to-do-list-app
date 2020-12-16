@@ -1,0 +1,48 @@
+{
+  "name": "repo-template",
+  "version": "1.0.0",
+  "description": "> Write about the project...",
+  "private": true,
+  "scripts": {
+    "test": "npm run webhint && npm run stylelint && npm run eslint && echo \"Passed ✅✅ No errors! 😁😁\"",
+    "webhint": "npx hint .",
+    "stylelint": "npx stylelint '**/*.{css,scss}'",
+    "eslint": "npx eslint .",
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "fix": "npx stylelint '**/*.{css,scss}' --fix && npx eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DcRonan/Repo-Template.git"
+  },
+  "author": "Daniel Ronan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DcRonan/Repo-Template/issues"
+  },
+  "homepage": "https://github.com/DcRonan/Repo-Template#readme",
+  "dependencies": {
+    "hint": "^6.1.1",
+    "lodash": "^4.17.20"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.0",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.18.0",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
