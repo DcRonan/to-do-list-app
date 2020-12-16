@@ -1,4 +1,4 @@
-class ToDoList {
+class ToDoItem {
   constructor(title, description, dueDate, priority, notes, checklist) {
     this.title = title;
     this.description = description;
@@ -9,4 +9,4 @@ class ToDoList {
   }
 }
 
-export default ToDoList;
+export default ToDoItem;
