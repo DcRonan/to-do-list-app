@@ -1,32 +1,16 @@
 import '../css/style.css';
-import ToDoItem from './toDoItems';
 import Project from './projects';
 import * as el from './elements';
 import showToDo from './toDoIndex';
 import showProject from './projectIndex';
+import {newToDoItem, formProjectData} from './newToDo';
 
 showProject();
-
-el.defaultOption.setAttribute('value', el.defaultProject.title);
-el.defaultOption.textContent = el.defaultProject.title;
-el.projectToDo.appendChild(el.defaultOption);
+formProjectData();
 
 el.toDoForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const toDo = new ToDoItem(
-    el.titleInput.value,
-    el.descInput.value,
-    el.dueInput.value,
-    el.priorityInput.value,
-    el.noteInput.value,
-    el.checkInput.value
-  );
-  el.projects.forEach((project) => {
-    if (project.title === el.projectToDo.value) {
-      toDo.project = project;
-    }
-  });
-  el.toDos.push(toDo);
+  newToDoItem();
   showToDo();
 });
 

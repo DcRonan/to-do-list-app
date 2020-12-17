@@ -21,6 +21,7 @@ const dueDateDiv = document.querySelector('.task-due-date');
 const priorityDiv = document.querySelector('.task-priority');
 const notesDiv = document.querySelector('.task-notes');
 const checkListDiv = document.querySelector('.task-check-list');
+const projectDiv = document.querySelector('#show-project');
 
 export {
   toDoForm,
@@ -42,5 +43,6 @@ export {
   checkListDiv,
   toDos,
   defaultProject,
-  projects
+  projects,
+  projectDiv
 };

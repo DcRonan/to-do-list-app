@@ -1,9 +1,8 @@
 import * as el from './elements';
 
-const projectDiv = document.querySelector('#show-project');
-
 const showProject = () => {
-  projectDiv.innerHTML = el.projects.map(task => task.title);
+  el.projectDiv.innerHTML = el.projects.map(task => task.title);
+  el.projectDiv.classList = 'text-center';
 }
 
 export default showProject;
