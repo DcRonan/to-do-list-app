@@ -2,8 +2,10 @@ import '../css/style.css';
 import ToDoItem from './toDoItems';
 import Project from './projects';
 import * as el from './elements';
+import showToDo from './toDoIndex';
 
 const defaultProject = new Project('Work');
+const projects = [defaultProject];
 
 el.defaultOption.setAttribute('value', defaultProject.title);
 el.defaultOption.textContent = defaultProject.title;
@@ -25,12 +27,13 @@ el.toDoForm.addEventListener('submit', (e) => {
     }
   });
   el.toDos.push(toDo);
+  showToDo();
 });
 
 el.projectForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const project = new Project(el.projectTitle.value);
-  el.projects.push(project);
+  projects.push(project);
   const option = document.createElement('option');
   option.setAttribute('value', project.title);
   option.textContent = project.title;
