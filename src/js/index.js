@@ -3,12 +3,12 @@ import ToDoItem from './toDoItems';
 import Project from './projects';
 import * as el from './elements';
 import showToDo from './toDoIndex';
+import showProject from './projectIndex';
 
-const defaultProject = new Project('Work');
-const projects = [defaultProject];
+showProject();
 
-el.defaultOption.setAttribute('value', defaultProject.title);
-el.defaultOption.textContent = defaultProject.title;
+el.defaultOption.setAttribute('value', el.defaultProject.title);
+el.defaultOption.textContent = el.defaultProject.title;
 el.projectToDo.appendChild(el.defaultOption);
 
 el.toDoForm.addEventListener('submit', (e) => {
@@ -21,7 +21,7 @@ el.toDoForm.addEventListener('submit', (e) => {
     el.noteInput.value,
     el.checkInput.value
   );
-  projects.forEach((project) => {
+  el.projects.forEach((project) => {
     if (project.title === el.projectToDo.value) {
       toDo.project = project;
     }
@@ -33,7 +33,7 @@ el.toDoForm.addEventListener('submit', (e) => {
 el.projectForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const project = new Project(el.projectTitle.value);
-  projects.push(project);
+  el.projects.push(project);
   const option = document.createElement('option');
   option.setAttribute('value', project.title);
   option.textContent = project.title;

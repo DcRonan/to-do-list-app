@@ -1,4 +1,8 @@
+import Project from './projects';
+
 const toDos = [];
+const defaultProject = new Project('Work');
+const projects = [defaultProject];
 
 const toDoForm = document.querySelector('#to-do-form');
 const projectForm = document.querySelector('#project-form');
@@ -37,4 +41,6 @@ export {
   notesDiv,
   checkListDiv,
   toDos,
+  defaultProject,
+  projects
 };
