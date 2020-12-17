@@ -1,43 +1,38 @@
 import '../css/style.css';
 import ToDoItem from './toDoItems';
 import Project from './projects';
+import * as el from './elements';
 
-const toDos = [];
 const defaultProject = new Project('Work');
-const projects = [defaultProject];
-const toDoForm = document.querySelector('#to-do-form');
-const projectForm = document.querySelector('#project-form');
-const titleInput = document.getElementById('title');
-const descInput = document.getElementById('desc');
-const dueInput = document.getElementById('dueDate');
-const priorityInput = document.getElementById('priority');
-const noteInput = document.getElementById('notes');
-const checkInput = document.getElementById('checkList');
-const projectTitle = document.getElementById('projectTitle');
-const projectToDo = document.getElementById('projectToDo');
-const defaultOption = document.createElement('option');
-defaultOption.setAttribute('value', defaultProject.title);
-defaultOption.textContent = defaultProject.title;
-projectToDo.appendChild(defaultOption);
 
-toDoForm.addEventListener('submit', (e) => {
+el.defaultOption.setAttribute('value', defaultProject.title);
+el.defaultOption.textContent = defaultProject.title;
+el.projectToDo.appendChild(el.defaultOption);
+
+el.toDoForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const toDo = new ToDoItem(titleInput.value, descInput.value,
-    dueInput.value, priorityInput.value, noteInput.value, checkInput.value);
-  projects.forEach(project => {
-    if (project.title === projectToDo.value) {
+  const toDo = new ToDoItem(
+    el.titleInput.value,
+    el.descInput.value,
+    el.dueInput.value,
+    el.priorityInput.value,
+    el.noteInput.value,
+    el.checkInput.value
+  );
+  projects.forEach((project) => {
+    if (project.title === el.projectToDo.value) {
       toDo.project = project;
     }
   });
-  toDos.push(toDo);
+  el.toDos.push(toDo);
 });
 
-projectForm.addEventListener('submit', e => {
+el.projectForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const project = new Project(projectTitle.value);
-  projects.push(project);
+  const project = new Project(el.projectTitle.value);
+  el.projects.push(project);
   const option = document.createElement('option');
   option.setAttribute('value', project.title);
   option.textContent = project.title;
-  projectToDo.appendChild(option);
+  el.projectToDo.appendChild(option);
 });
