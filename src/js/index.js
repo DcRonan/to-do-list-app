@@ -1,4 +1,5 @@
 import '../css/style.css';
-import { formSubmit } from './projects';
+import { formSubmit, newToDo } from './projects';
 
 formSubmit()
+newToDo()
