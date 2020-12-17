@@ -11,6 +11,7 @@ const titleInput = document.getElementById('title');
 const descInput = document.getElementById('desc');
 const dueInput = document.getElementById('dueDate');
 const priorityInput = document.getElementById('priority');
+const noteInput = document.getElementById('notes');
 const checkInput = document.getElementById('checkList');
 const projectTitle = document.getElementById('projectTitle');
 const projectToDo = document.getElementById('projectToDo');
@@ -22,7 +23,12 @@ projectToDo.appendChild(defaultOption);
 toDoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const toDo = new ToDoItem(titleInput.value, descInput.value,
-    dueInput.value, priorityInput.value, checkInput.value);
+    dueInput.value, priorityInput.value, noteInput.value, checkInput.value);
+  projects.forEach(project => {
+    if (project.title === projectToDo.value) {
+      toDo.project = project;
+    }
+  });
   toDos.push(toDo);
 });
 
