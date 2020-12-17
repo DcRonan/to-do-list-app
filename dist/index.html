@@ -9,7 +9,8 @@
 
 <body>
 
-  <form class="border-red-600 border text-center" id="form">
+  <form class="border-red-600 border text-center" id="to-do-form">
+    <h3>To do form</h3>
     <div>
       <label for="title">Title</label>
       <input id="title" class="border-red-600 border" type="text" name="first name">
@@ -34,14 +35,13 @@
       <label for="checkList">Checklist</label>
       <input id="checkList" class="border border-red-900" type="text" name="checkList">
     </div>
-    <div>
-      <label for="project">Project</label>
-      <input id="project" class="border border-red-900" type="text" name="project">
-    </div>
-    <div>
-      <label for="project-title">Project Title</label>
-      <input id="project-title" class="border border-red-900" type="text" name="project-title">
-    </div>
+    <input type="submit" value="Submit">
+  </form>
+
+  <form id="project-form">
+    <h3>Project Form</h3>
+    <label for="projectTitle">Project Title</label>
+    <input type="text" class="border border-red-900" name="projectTitle" id="projectTitle">
     <input type="submit" value="Submit">
   </form>
 
