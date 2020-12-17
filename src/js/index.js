@@ -11,7 +11,8 @@ const descInput = document.getElementById('desc');
 const dueInput = document.getElementById('dueDate');
 const priorityInput = document.getElementById('priority');
 const checkInput = document.getElementById('checkList');
-const projectTitle = document.getElementById('projectTitle')
+const projectTitle = document.getElementById('projectTitle');
+const projectToDo = document.getElementById('projectToDo');
 
 toDoForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -24,5 +25,8 @@ projectForm.addEventListener('submit', e => {
   e.preventDefault();
   const project = new Project(projectTitle.value);
   projects.push(project);
-  console.log(projects);
-})
+  const option = document.createElement('option');
+  option.setAttribute('value', project.title);
+  option.textContent = project.title;
+  projectToDo.appendChild(option);
+});
