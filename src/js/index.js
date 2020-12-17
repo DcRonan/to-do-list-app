@@ -3,7 +3,7 @@ import Project from './projects';
 import * as el from './elements';
 import showToDo from './toDoIndex';
 import showProject from './projectIndex';
-import {newToDoItem, formProjectData} from './newToDo';
+import { newToDoItem, formProjectData } from './newToDo';
 
 showProject();
 formProjectData();

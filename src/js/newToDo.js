@@ -5,7 +5,7 @@ const formProjectData = () => {
   el.defaultOption.setAttribute('value', el.defaultProject.title);
   el.defaultOption.textContent = el.defaultProject.title;
   el.projectToDo.appendChild(el.defaultOption);
-}
+};
 
 const newToDoItem = () => {
   const toDo = new ToDoItem(
@@ -14,7 +14,7 @@ const newToDoItem = () => {
     el.dueInput.value,
     el.priorityInput.value,
     el.noteInput.value,
-    el.checkInput.value
+    el.checkInput.value,
   );
   el.projects.forEach((project) => {
     if (project.title === el.projectToDo.value) {
@@ -22,7 +22,6 @@ const newToDoItem = () => {
     }
   });
   el.toDos.push(toDo);
-  console.log(el.toDos);
 };
 
-export {newToDoItem, formProjectData};
+export { newToDoItem, formProjectData };
