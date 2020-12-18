@@ -1,12 +1,21 @@
 import * as el from './elements';
 
 const showToDo = () => {
-  el.titleDiv.innerHTML = el.toDos.map(task => task.title);
-  el.descDiv.innerHTML = el.toDos.map(task => task.description);
-  el.dueDateDiv.innerHTML = el.toDos.map(task => task.dueDate);
-  el.priorityDiv.innerHTML = el.toDos.map(task => task.priority);
-  el.notesDiv.innerHTML = el.toDos.map(task => task.notes);
-  el.checkListDiv.innerHTML = el.toDos.map(task => task.checkList);
+  const showTable = document.createElement('table');
+  showTable.setAttribute('id', 'to-do-list-items');
+  const tableHeading = document.createElement('tr');
+  tableHeading.innerHTML = `
+    <th>Title</th><th>Description</th><th>Due Date</th><th>Priority</th><th>Notes</th><th>Checklist</th>
+  `
+  showTable.appendChild(tableHeading);
+  console.log(showTable);
+  el.toDos.forEach((toDo) => {
+    const tableRow = document.createElement('tr');
+    tableRow.innerHTML = `<td>${toDo.title}</td><td>${toDo.description}</td><td>${toDo.dueDate}</td><td>${toDo.priority}</td><td>${toDo.notes}</td><td>${toDo.checkList}</td>`
+    showTable.appendChild(tableRow);
+  });
+  
+  return showTable; 
 }
 
 export default showToDo;

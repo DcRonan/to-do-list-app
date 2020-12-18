@@ -8,7 +8,6 @@ import { newToDoItem, formProjectData } from './newToDo';
 
 el.content.removeChild(el.toDoForm);
 el.content.removeChild(el.projectForm);
-el.content.removeChild(el.getList);
 
 formProjectData();
 
@@ -30,8 +29,12 @@ el.listProjects.addEventListener('click', () => {
 el.toDoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   newToDoItem();
-	showToDo();
-	el.content.appendChild(el.getList);
+  let parent = document.createElement('div');
+  parent.setAttribute('id', 'to-do-list');
+  el.content.appendChild(parent);
+  parent = document.querySelector('#to-do-list');
+  parent.innerHTML = '';
+  parent.appendChild(showToDo())
 });
 
 el.projectForm.addEventListener('submit', (e) => {
@@ -42,4 +45,9 @@ el.projectForm.addEventListener('submit', (e) => {
   option.setAttribute('value', project.title);
   option.textContent = project.title;
   el.projectToDo.appendChild(option);
+});
+
+el.openToDos.addEventListener('click', () => {
+  el.content.innerHTML = '';
+  el.content.appendChild(showToDo());
 });

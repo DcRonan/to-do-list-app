@@ -6,7 +6,6 @@ const projects = [defaultProject, secondProject];
 const toDos = [];
 
 const content = document.querySelector('#content');
-const getList = document.querySelector('#each-to-do');
 const toDoForm = document.querySelector('#to-do-form');
 const projectForm = document.querySelector('#project-form');
 const titleInput = document.getElementById('title');
@@ -31,7 +30,6 @@ const openToDos = document.querySelector('#open-items-list');
 
 export {
   toDoForm,
-  getList,
   projectForm,
   titleInput,
   descInput,
