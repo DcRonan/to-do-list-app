@@ -13,7 +13,10 @@ const openProject = document.querySelector('#open-project');
 const openProjectsList = document.querySelector('#open-projects-list');
 const openItemsList = document.querySelector('#open-items-list');
 const showToDoForm = () => {
-  content.innerHTML = `<form class="border-red-600 border text-center" id="to-do-form">
+	const form = document.createElement('form');
+	form.setAttribute('id', 'to-do-form');
+	form.classList = ' border-red-600 border text-center';
+  form.innerHTML = `
 				<h3>To do form</h3>
 				<div>
 					<label for="title">Title</label>
@@ -45,7 +48,8 @@ const showToDoForm = () => {
 					</select>
 				</div>
 				<input type="submit" value="Submit">
-      </form>`;
+			`;
+			return form;
 };
 const showProjectForm = () => {
 	content.innerHTML = `<form id="project-form">
@@ -56,7 +60,8 @@ const showProjectForm = () => {
 			</form>`;
 };
 openToDo.addEventListener('click', () => {
-  showToDoForm();
+	content.innerHTML='';
+	content.appendChild(showToDoForm());
 });
 
 openProject.addEventListener('click', () => {
@@ -82,18 +87,18 @@ openItemsList.addEventListener('click', () => {
 // showProject();
 // formProjectData();
 
-// el.toDoForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   newToDoItem();
-//   showToDo();
-// });
+el.toDoForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  newToDoItem();
+  showToDo();
+});
 
-// el.projectForm.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   const project = new Project(el.projectTitle.value);
-//   el.projects.push(project);
-//   const option = document.createElement('option');
-//   option.setAttribute('value', project.title);
-//   option.textContent = project.title;
-//   el.projectToDo.appendChild(option);
-// });
+el.projectForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const project = new Project(el.projectTitle.value);
+  el.projects.push(project);
+  const option = document.createElement('option');
+  option.setAttribute('value', project.title);
+  option.textContent = project.title;
+  el.projectToDo.appendChild(option);
+});
