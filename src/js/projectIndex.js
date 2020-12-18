@@ -2,13 +2,16 @@ import * as el from './elements';
 
 const showProjects = () => {
   const showProjectsDiv = document.createElement('div');
-	el.content.appendChild(showProjectsDiv);
 	const projectUl = document.createElement('ul');
+	el.projects.forEach(project => {
+		const eachProject = document.createElement('li');
+		eachProject.textContent = project.title;
+		projectUl.appendChild(eachProject);
+	});
+
+  projectUl.classList = 'text-center';
 	showProjectsDiv.appendChild(projectUl);
-	const eachProject = document.createElement('li');
-	showProjectsDiv.appendChild(eachProject);
-	eachProject.innerHTML = el.projects.map(task => task.title);
-  eachProject.classList = 'text-center';
+	el.content.appendChild(showProjectsDiv);
 }
 
 export default showProjects;
