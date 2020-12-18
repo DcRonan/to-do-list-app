@@ -4,6 +4,7 @@ const toDos = [];
 const defaultProject = new Project('Work');
 const projects = [defaultProject];
 
+const content = document.querySelector('#content');
 const toDoForm = document.querySelector('#to-do-form');
 const projectForm = document.querySelector('#project-form');
 const titleInput = document.getElementById('title');
@@ -22,6 +23,10 @@ const priorityDiv = document.querySelector('.task-priority');
 const notesDiv = document.querySelector('.task-notes');
 const checkListDiv = document.querySelector('.task-check-list');
 const projectDiv = document.querySelector('#show-project');
+const addToDo = document.querySelector('#open-todo');
+const addProject = document.querySelector('#open-project');
+const listProjects = document.querySelector('#open-projects-list');
+const openToDos = document.querySelector('#open-items-list');
 
 export {
   toDoForm,
@@ -44,5 +49,10 @@ export {
   toDos,
   defaultProject,
   projects,
-  projectDiv
+  projectDiv,
+  content,
+  addToDo,
+  addProject,
+  listProjects,
+  openToDos
 };
