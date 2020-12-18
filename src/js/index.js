@@ -8,6 +8,7 @@ import { newToDoItem, formProjectData } from './newToDo';
 
 el.content.removeChild(el.toDoForm);
 el.content.removeChild(el.projectForm);
+el.content.removeChild(el.getList);
 
 formProjectData();
 
@@ -29,7 +30,8 @@ el.listProjects.addEventListener('click', () => {
 el.toDoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   newToDoItem();
-  showToDo();
+	showToDo();
+	el.content.appendChild(el.getList);
 });
 
 el.projectForm.addEventListener('submit', (e) => {
