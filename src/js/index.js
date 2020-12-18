@@ -12,22 +12,22 @@ el.content.removeChild(el.projectForm);
 formProjectData();
 
 el.addToDo.addEventListener('click', () => {
-	el.content.innerHTML = '';
-	el.content.appendChild(el.toDoForm);
-})
+  el.content.innerHTML = '';
+  el.content.appendChild(el.toDoForm);
+});
 
 el.addProject.addEventListener('click', () => {
-	el.content.innerHTML = '';
-	el.content.appendChild(el.projectForm);
-})
+  el.content.innerHTML = '';
+  el.content.appendChild(el.projectForm);
+});
 
 el.listProjects.addEventListener('click', () => {
-	el.content.innerHTML = '';
-	showProjects();
-})
+  el.content.innerHTML = '';
+  showProjects();
+});
 
 el.toDoForm.addEventListener('submit', (e) => {
-	e.preventDefault();
+  e.preventDefault();
   newToDoItem();
   showToDo();
 });
