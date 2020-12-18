@@ -2,13 +2,14 @@ import '../css/style.css';
 import Project from './projects';
 import * as el from './elements';
 import showToDo from './toDoIndex';
-import showProject from './projectIndex';
+import showProjects from './projectIndex';
+
 import { newToDoItem, formProjectData } from './newToDo';
 
-showProject();
-formProjectData();
 el.content.removeChild(el.toDoForm);
 el.content.removeChild(el.projectForm);
+
+formProjectData();
 
 el.addToDo.addEventListener('click', () => {
 	el.content.innerHTML = '';
@@ -20,8 +21,13 @@ el.addProject.addEventListener('click', () => {
 	el.content.appendChild(el.projectForm);
 })
 
+el.listProjects.addEventListener('click', () => {
+	el.content.innerHTML = '';
+	showProjects();
+})
+
 el.toDoForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+	e.preventDefault();
   newToDoItem();
   showToDo();
 });

@@ -1,8 +1,9 @@
 import Project from './projects';
 
-const toDos = [];
 const defaultProject = new Project('Work');
-const projects = [defaultProject];
+const secondProject = new Project('Study');
+const projects = [defaultProject, secondProject];
+const toDos = [];
 
 const content = document.querySelector('#content');
 const toDoForm = document.querySelector('#to-do-form');
@@ -22,7 +23,6 @@ const dueDateDiv = document.querySelector('.task-due-date');
 const priorityDiv = document.querySelector('.task-priority');
 const notesDiv = document.querySelector('.task-notes');
 const checkListDiv = document.querySelector('.task-check-list');
-const projectDiv = document.querySelector('#show-project');
 const addToDo = document.querySelector('#open-todo');
 const addProject = document.querySelector('#open-project');
 const listProjects = document.querySelector('#open-projects-list');
@@ -49,7 +49,6 @@ export {
   toDos,
   defaultProject,
   projects,
-  projectDiv,
   content,
   addToDo,
   addProject,

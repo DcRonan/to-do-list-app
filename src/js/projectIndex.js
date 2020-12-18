@@ -1,8 +1,14 @@
 import * as el from './elements';
 
-const showProject = () => {
-  el.projectDiv.innerHTML = el.projects.map(task => task.title);
-  el.projectDiv.classList = 'text-center';
+const showProjects = () => {
+  const showProjectsDiv = document.createElement('div');
+	el.content.appendChild(showProjectsDiv);
+	const projectUl = document.createElement('ul');
+	showProjectsDiv.appendChild(projectUl);
+	const eachProject = document.createElement('li');
+	showProjectsDiv.appendChild(eachProject);
+	eachProject.innerHTML = el.projects.map(task => task.title);
+  eachProject.classList = 'text-center';
 }
 
-export default showProject;
+export default showProjects;
