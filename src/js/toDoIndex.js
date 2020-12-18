@@ -8,7 +8,6 @@ const showToDo = () => {
     <th>Title</th><th>Description</th><th>Due Date</th><th>Priority</th><th>Notes</th><th>Checklist</th>
   `
   showTable.appendChild(tableHeading);
-  console.log(showTable);
   el.toDos.forEach((toDo) => {
     const tableRow = document.createElement('tr');
     tableRow.innerHTML = `<td>${toDo.title}</td><td>${toDo.description}</td><td>${toDo.dueDate}</td><td>${toDo.priority}</td><td>${toDo.notes}</td><td>${toDo.checkList}</td>`
