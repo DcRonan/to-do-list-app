@@ -8,20 +8,18 @@ const formProjectData = () => {
 };
 
 const newToDoItem = () => {
-  const toDo = new ToDoItem(
-    el.titleInput.value,
-    el.descInput.value,
-    el.dueInput.value,
-    'medium',
-    el.noteInput.value,
-    el.checkInput.value
-  );
   el.projects.forEach((project) => {
     if (project.title === el.projectToDo.value) {
-      toDo.project = project;
+      el.toDo.project = project;
     }
   });
-  el.toDos.push(toDo);
+  
+  el.priority.forEach((priority) => {
+    if (priority === el.getPriority.value) {
+      el.toDo.priority = priority;
+    }
+  })
+  el.toDos.push(el.toDo);
 };
 
 export {newToDoItem, formProjectData};

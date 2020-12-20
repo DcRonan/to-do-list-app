@@ -12,12 +12,11 @@ el.addToDo.addEventListener('click', () => {
   el.content.innerHTML = '';
   el.content.appendChild(el.toDoForm);
   formProjectData();
-  const getPriority = document.querySelector('#set-priority');
   el.priority.forEach((priority) => {
     const option = document.createElement('option');
     option.setAttribute('value', priority);
     option.textContent = priority;
-    getPriority.appendChild(option);
+    el.getPriority.appendChild(option);
   })
 });
 

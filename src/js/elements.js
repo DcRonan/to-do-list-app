@@ -3,7 +3,7 @@ import Project from './projects';
 
 const defaultProject = new Project('Work');
 const secondProject = new Project('Study');
-const defaultToDo = new newToDoItem('dssf', 'dssf', 'dssf', 'dssf', 'dssf', 'dssf')
+const defaultToDo = new newToDoItem('dssf', 'dssf', 'dssf', 'dssf', 'dssf', 'dssf');
 const projects = [defaultProject, secondProject];
 const toDos = [defaultToDo];
 const priority = ['Low', 'Medium', 'High'];
@@ -30,6 +30,16 @@ const addToDo = document.querySelector('#open-todo');
 const addProject = document.querySelector('#open-project');
 const listProjects = document.querySelector('#open-projects-list');
 const openToDos = document.querySelector('#open-items-list');
+const getPriority = document.querySelector('#set-priority');
+
+const toDo = new newToDoItem(
+  titleInput.value,
+  descInput.value,
+  dueInput.value,
+  'medium',
+  noteInput.value,
+  checkInput.value
+);
 
 export {
   toDoForm,
@@ -57,5 +67,7 @@ export {
   addProject,
   listProjects,
   openToDos,
-  priority
+  priority,
+  getPriority,
+  toDo
 };
