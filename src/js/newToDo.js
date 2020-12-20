@@ -1,5 +1,4 @@
 import * as el from './elements';
-import ToDoItem from './toDoItems';
 
 const formProjectData = () => {
   el.defaultOption.setAttribute('value', el.defaultProject.title);

@@ -8,16 +8,19 @@ import { newToDoItem, formProjectData } from './newToDo';
 el.content.removeChild(el.toDoForm);
 el.content.removeChild(el.projectForm);
 
+el.numOfTasks.textContent = el.toDos.length;
+
+el.priority.forEach((priority) => {
+  const option = document.createElement('option');
+  option.setAttribute('value', priority);
+  option.textContent = priority;
+  el.getPriority.appendChild(option);
+})
+
 el.addToDo.addEventListener('click', () => {
   el.content.innerHTML = '';
   el.content.appendChild(el.toDoForm);
   formProjectData();
-  el.priority.forEach((priority) => {
-    const option = document.createElement('option');
-    option.setAttribute('value', priority);
-    option.textContent = priority;
-    el.getPriority.appendChild(option);
-  })
 });
 
 el.addProject.addEventListener('click', () => {

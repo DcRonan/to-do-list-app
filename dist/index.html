@@ -8,59 +8,89 @@
 </head>
 
 <body>
-	<div class="flex">
-		<aside>
-			<ul>
-				<li id="open-todo">Add to do item</li>
-				<li id="open-project">Add project</li>
-				<li id="open-projects-list">List all projects</li>
-				<li id="open-items-list">List all to do items</li>
-			</ul>
+
+	<main class="flex w-full h-screen">
+		<aside class="w-80 hidden h-screen sm:block">
+			<div class="flex flex-col justify-between h-screen p-4 bg-gray-800">
+				<div class="text-sm">
+					<div id="open-items-list"
+						class="bg-gray-900 flex justify-between items-center text-white p-2 rounded mt-2 cursor-pointer hover:bg-gray-700 hover:text-blue-300">
+						<span>Inbox</span>
+						<span id="num-of-tasks"
+							class="w-6 h-6 pt-1 bg-purple-600 rounded-full text-white text-center text-xs"></span>
+					</div>
+					<div id="open-projects-list" class="bg-gray-900 text-white p-2 rounded mt-2 cursor-pointer">
+						Projects
+					</div>
+				</div>
+				<div id="project-and-task-buttons">
+					<div id="project-and-task" class="flex flex-col p-3 text-white">
+						<button id="open-project" type="button"
+							class="border border-none bg-indigo-500 text-white rounded-md p-2 m-2 duration-300 hover:bg-indigo-700 focus:outline-none">
+							Project
+						</button>
+						<button id="open-todo" type="button"
+							class="border border-none bg-green-600 text-white rounded-md p-2 m-2 duration-300 hover:bg-green-700 focus:outline-none">
+							Task
+						</button>
+					</div>
+					<div class="flex p-3 text-white bg-green-500 rounded cursor-pointer text-center text-sm">
+						<button id="new-btn" class="rounded inline-flex items-center">
+							<span>Add New</span>
+						</button>
+					</div>
+				</div>
+			</div>
 		</aside>
-		<div id="content">
-			<form class="border-red-600 border text-center" id="to-do-form">
-				<h3>To do form</h3>
-				<div>
-					<label for="title">Title</label>
-					<input id="title" class="border-red-600 border" type="text" name="first name">
-				</div>
-				<div>
-					<label for="desc">Description</label>
-					<input id="desc" class="border border-red-900" type="text" name="last name">
-				</div>
-				<div>
-					<label for="dueDate">Due Date</label>
-					<input id="dueDate" class="border border-red-900" type="text" name="dueDate">
-				</div>
-				<div>
-					<select name="priorityToDo" id="set-priority">
-						<option disabled selected value="disabled">Choose priority</option>
-					</select>
-				</div>
-				<div>
-					<label for="notes">Notes</label>
-					<input id="notes" class="border border-red-900" type="text" name="notes">
-				</div>
-				<div>
-					<label for="checkList">Checklist</label>
-					<input id="checkList" class="border border-red-900" type="text" name="checkList">
-				</div>
-				<div>
-					<select name="projectToDo" id="projectToDo">
 
-					</select>
-				</div>
-				<input type="submit" value="Submit">
-			</form>
+		<section class="w-full p-4 bg-gray-100">
+			<div id="content" class="w-full h-auto p-4 text-md">
 
-			<form id="project-form">
-				<h3>Project Form</h3>
-				<label for="projectTitle">Project Title</label>
-				<input type="text" class="border border-red-900" name="projectTitle" id="projectTitle">
-				<input type="submit" value="Submit">
-			</form>
-		</div>
-	</div>
+				<form class="border-red-600 border text-center" id="to-do-form">
+					<h3>To do form</h3>
+					<div>
+						<label for="title">Title</label>
+						<input id="title" class="border-red-600 border" type="text" name="first name">
+					</div>
+					<div>
+						<label for="desc">Description</label>
+						<input id="desc" class="border border-red-900" type="text" name="last name">
+					</div>
+					<div>
+						<label for="dueDate">Due Date</label>
+						<input id="dueDate" class="border border-red-900" type="text" name="dueDate">
+					</div>
+					<div>
+						<select name="priorityToDo" id="set-priority">
+							<option disabled selected value="disabled">Choose priority</option>
+						</select>
+					</div>
+					<div>
+						<label for="notes">Notes</label>
+						<input id="notes" class="border border-red-900" type="text" name="notes">
+					</div>
+					<div>
+						<label for="checkList">Checklist</label>
+						<input id="checkList" class="border border-red-900" type="text" name="checkList">
+					</div>
+					<div>
+						<select name="projectToDo" id="projectToDo">
+
+						</select>
+					</div>
+					<input type="submit" value="Submit">
+				</form>
+
+				<form id="project-form">
+					<h3>Project Form</h3>
+					<label for="projectTitle">Project Title</label>
+					<input type="text" class="border border-red-900" name="projectTitle" id="projectTitle">
+					<input type="submit" value="Submit">
+				</form>
+
+			</div>
+		</section>
+	</main>
 
 	<script src="./index.bundle.js"></script>
 </body>

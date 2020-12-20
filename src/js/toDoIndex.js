@@ -5,8 +5,7 @@ const showAndDeleteToDo = () => {
   showTable.setAttribute('id', 'to-do-list-items');
   const tableHeading = document.createElement('tr');
   tableHeading.innerHTML = `
-    <th>Title</th><th>Description</th><th>Due Date</th><th>Priority</th><th>Notes</th><th>Checklist</th>
-  `;
+    <th>Title</th><th>Description</th><th>Due Date</th><th>Priority</th><th>Notes</th><th>Checklist</th>`;
   showTable.appendChild(tableHeading);
   el.toDos.forEach((toDo) => {
     const tableRow = document.createElement('tr');

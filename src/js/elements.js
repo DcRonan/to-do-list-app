@@ -31,6 +31,9 @@ const addProject = document.querySelector('#open-project');
 const listProjects = document.querySelector('#open-projects-list');
 const openToDos = document.querySelector('#open-items-list');
 const getPriority = document.querySelector('#set-priority');
+const addNewBtn = document.querySelector('#new-btn');
+const projectAndTaskBtn = document.querySelector('#project-and-task');
+const numOfTasks = document.querySelector('#num-of-tasks');
 
 const toDo = new newToDoItem(
   titleInput.value,
@@ -69,5 +72,8 @@ export {
   openToDos,
   priority,
   getPriority,
-  toDo
+  toDo,
+  projectAndTaskBtn,
+  addNewBtn,
+  numOfTasks
 };
