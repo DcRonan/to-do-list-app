@@ -12,7 +12,7 @@ const newToDoItem = () => {
     el.titleInput.value,
     el.descInput.value,
     el.dueInput.value,
-    el.priorityInput.value,
+    'medium',
     el.noteInput.value,
     el.checkInput.value
   );
@@ -24,4 +24,4 @@ const newToDoItem = () => {
   el.toDos.push(toDo);
 };
 
-export { newToDoItem, formProjectData };
+export {newToDoItem, formProjectData};

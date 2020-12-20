@@ -1,6 +1,6 @@
 import * as el from './elements';
 
-const showToDo = () => {
+const showAndDeleteToDo = () => {
   const showTable = document.createElement('table');
   showTable.setAttribute('id', 'to-do-list-items');
   const tableHeading = document.createElement('tr');
@@ -29,4 +29,4 @@ const showToDo = () => {
   return showTable;
 };
 
-export default showToDo;
+export default showAndDeleteToDo;

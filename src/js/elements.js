@@ -6,6 +6,7 @@ const secondProject = new Project('Study');
 const defaultToDo = new newToDoItem('dssf', 'dssf', 'dssf', 'dssf', 'dssf', 'dssf')
 const projects = [defaultProject, secondProject];
 const toDos = [defaultToDo];
+const priority = ['Low', 'Medium', 'High'];
 
 const content = document.querySelector('#content');
 const toDoForm = document.querySelector('#to-do-form');
@@ -55,5 +56,6 @@ export {
   addToDo,
   addProject,
   listProjects,
-  openToDos
+  openToDos,
+  priority
 };
