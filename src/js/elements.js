@@ -36,7 +36,7 @@ const toDo = new newToDoItem(
   titleInput.value,
   descInput.value,
   dueInput.value,
-  'medium',
+  'Low',
   noteInput.value,
   checkInput.value
 );
