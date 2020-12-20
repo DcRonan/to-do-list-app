@@ -14,7 +14,7 @@ const newToDoItem = () => {
     el.dueInput.value,
     el.priorityInput.value,
     el.noteInput.value,
-    el.checkInput.value,
+    el.checkInput.value
   );
   el.projects.forEach((project) => {
     if (project.title === el.projectToDo.value) {

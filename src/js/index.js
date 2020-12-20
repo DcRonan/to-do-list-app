@@ -34,7 +34,8 @@ el.toDoForm.addEventListener('submit', (e) => {
   el.content.appendChild(parent);
   parent = document.querySelector('#to-do-list');
   parent.innerHTML = '';
-  parent.appendChild(showToDo())
+  parent.appendChild(showToDo());
+  el.toDoForm.reset();
 });
 
 el.projectForm.addEventListener('submit', (e) => {
@@ -45,6 +46,7 @@ el.projectForm.addEventListener('submit', (e) => {
   option.setAttribute('value', project.title);
   option.textContent = project.title;
   el.projectToDo.appendChild(option);
+  el.projectForm.reset();
 });
 
 el.openToDos.addEventListener('click', () => {
