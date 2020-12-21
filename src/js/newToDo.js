@@ -12,11 +12,11 @@ const newToDoItem = () => {
     el.titleInput.value,
     el.descInput.value,
     el.dueInput.value,
-    el.getPriority.value,
+    el.getPriority.value === 'disabled' ? el.getPriority.value = 'Low' : el.getPriority.value,
     el.noteInput.value,
     el.checkInput.value,
   );
-  
+
   el.projects.forEach((project) => {
     if (project.title === el.projectToDo.value) {
       toDo.project = project;
