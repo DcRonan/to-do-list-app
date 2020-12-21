@@ -44,11 +44,14 @@ const showAndDeleteToDo = () => {
     <div class="h-4 w-4 mr-3 rounded-sm border border-blue-400"></div>
     <div>${toDo.title}</div>
     </div>
-    <div class="flex"> 
+    <div class="flex items-center"> 
     <div class="mr-3">${toDo.dueDate}</div>
-    <div class="info-btn"><i class="fas fa-info-circle"></i></div>
-    </div>
+    <button id="open-todo" type="button"
+    class="border border-none p-1 bg-gray-600 text-white rounded-lg duration-300 focus:outline-none">
+    Info
+  </button>    </div>
   </div>`;
+
 
     tableRow.appendChild(deleteBtn);
     tableRow.appendChild(editBtn);
