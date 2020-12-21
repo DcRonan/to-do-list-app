@@ -1,10 +1,8 @@
-import ToDoItem from './toDoItems';
 import Project from './projects';
 
 const defaultProject = new Project('Work');
-const defaultToDo = new ToDoItem('dssf', 'dssf', 'dssf', 'dssf', 'dssf', 'dssf');
 const projects = JSON.parse(localStorage.getItem('projects')) || [defaultProject];
-const toDos = JSON.parse(localStorage.getItem('toDos')) || [defaultToDo];
+const toDos = JSON.parse(localStorage.getItem('toDos')) || [];
 const priority = ['Low', 'Medium', 'High'];
 
 const content = document.querySelector('#content');
