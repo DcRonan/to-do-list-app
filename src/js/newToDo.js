@@ -1,12 +1,6 @@
 import * as el from './elements';
 import ToDoItem from './toDoItems';
 
-const formProjectData = () => {
-  el.defaultOption.setAttribute('value', el.defaultProject.title);
-  el.defaultOption.textContent = el.defaultProject.title;
-  el.projectToDo.appendChild(el.defaultOption);
-};
-
 const newToDoItem = () => {
   const toDo = new ToDoItem(
     el.titleInput.value,
@@ -27,4 +21,4 @@ const newToDoItem = () => {
   localStorage.setItem('toDos', JSON.stringify(el.toDos));
 };
 
-export { newToDoItem, formProjectData };
+export default newToDoItem;

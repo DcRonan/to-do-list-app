@@ -16,7 +16,6 @@ const noteInput = document.getElementById('notes');
 const checkInput = document.getElementById('checkList');
 const projectTitle = document.getElementById('projectTitle');
 const projectToDo = document.getElementById('projectToDo');
-const defaultOption = document.createElement('option');
 const titleDiv = document.querySelector('.task-title');
 const descDiv = document.querySelector('.task-desc');
 const dueDateDiv = document.querySelector('.task-due-date');
@@ -43,7 +42,6 @@ export {
   checkInput,
   projectTitle,
   projectToDo,
-  defaultOption,
   titleDiv,
   descDiv,
   dueDateDiv,

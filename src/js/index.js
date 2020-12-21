@@ -3,11 +3,15 @@ import Project from './projects';
 import * as el from './elements';
 import showAndDeleteToDo from './toDoIndex';
 import showProjects from './projectIndex';
-import { newToDoItem, formProjectData } from './newToDo';
+import newToDoItem from './newToDo';
 
 el.content.removeChild(el.toDoForm);
 el.content.removeChild(el.projectForm);
-
+el.projects.forEach((project) => {
+  const option = document.createElement('option');
+  option.textContent = project.title;
+  el.projectToDo.appendChild(option);
+});
 el.numOfTasks.textContent = el.toDos.length;
 
 el.priority.forEach((priority) => {
@@ -20,7 +24,6 @@ el.priority.forEach((priority) => {
 el.addToDo.addEventListener('click', () => {
   el.content.innerHTML = '';
   el.content.appendChild(el.toDoForm);
-  formProjectData();
 });
 
 el.addProject.addEventListener('click', () => {
