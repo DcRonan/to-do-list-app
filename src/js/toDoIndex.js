@@ -44,8 +44,10 @@ const showAndDeleteToDo = () => {
     <div class="h-4 w-4 mr-3 rounded-sm border border-blue-400"></div>
     <div>${toDo.title}</div>
     </div>
-    <div>${toDo.dueDate}</div>
+    <div class="flex"> 
+    <div class="mr-3">${toDo.dueDate}</div>
     <div class="info-btn"><i class="fas fa-info-circle"></i></div>
+    </div>
   </div>`;
 
     tableRow.appendChild(deleteBtn);
