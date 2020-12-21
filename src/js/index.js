@@ -58,6 +58,8 @@ el.projectForm.addEventListener('submit', (e) => {
   option.textContent = project.title;
   el.projectToDo.appendChild(option);
   el.projectForm.reset();
+  el.content.removeChild(el.projectForm);
+  showProjects();
 });
 
 el.openToDos.addEventListener('click', () => {

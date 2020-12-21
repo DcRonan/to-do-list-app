@@ -3,10 +3,7 @@ import * as el from './elements';
 const showAndDeleteToDo = () => {
   const showTable = document.createElement('table');
   showTable.setAttribute('id', 'to-do-list-items');
-  const tableHeading = document.createElement('tr');
-  tableHeading.innerHTML = `
-    <th>Title</th><th>Description</th><th>Due Date</th><th>Priority</th><th>Notes</th><th>Checklist</th>`;
-  showTable.appendChild(tableHeading);
+  showTable.classList = 'w-full'
   el.toDos.forEach((toDo) => {
     const tableRow = document.createElement('tr');
     const deleteBtn = document.createElement('button');
@@ -40,7 +37,13 @@ const showAndDeleteToDo = () => {
       el.content.appendChild(el.toDoForm);
     });
 
-    tableRow.innerHTML = `<td>${toDo.title}</td><td>${toDo.description}</td><td>${toDo.dueDate}</td><td>${toDo.priority}</td><td>${toDo.notes}</td><td>${toDo.checkList}</td>`;
+    tableRow.innerHTML = `<div class="flex justify-between bg-gray-200 p-3 rounded-md w-full">
+    <div class="flex items-center"> 
+    <div class="h-4 w-4 mr-3 rounded-sm border border-blue-700"></div>
+    <div>${toDo.title}</div>
+    </div>
+    <div>${toDo.dueDate}</div>
+  </div>`
     tableRow.appendChild(deleteBtn);
     tableRow.appendChild(editBtn);
     showTable.appendChild(tableRow);

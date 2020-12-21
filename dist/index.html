@@ -36,7 +36,7 @@
 							</button>
 						</div>
 					</div>
-					<div class="p-3 text-white bg-green-500 rounded cursor-pointer text-center text-sm">
+					<div class="p-3 text-white bg-green-500 rounded cursor-pointer text-center text-sm duration-300 hover:bg-green-700 focus:outline-none">
 						<button id="new-btn" class="rounded inline-flex items-center focus:outline-none">
 							Add New
 						</button>
@@ -88,7 +88,7 @@
 						</select>
 					</label>
 
-					<div class="p-3 mt-4 text-white bg-green-500 rounded cursor-pointer text-center text-sm">
+					<div class="p-3 mt-4 text-white bg-green-500 rounded cursor-pointer text-center text-sm duration-300 hover:bg-green-700 focus:outline-none">
 						<button type="submit" class="rounded inline-flex items-center focus:outline-none">
 							Submit
 						</button>
@@ -96,11 +96,18 @@
 				</form>
 
 				<form id="project-form">
-					<h3>Project Form</h3>
-					<label for="projectTitle">Project Title</label>
-					<input type="text" class="border border-red-900" name="projectTitle" id="projectTitle">
-					<input type="submit" value="Submit">
+					<label class="block">
+						<span class="text-gray-700">Project Name</span>
+						<input id="projectTitle" class="form-input mt-1 block w-full" name="project name">
+					</label>
+					<div class="p-3 mt-4 text-white bg-green-500 rounded cursor-pointer text-center text-sm duration-300 hover:bg-green-700 focus:outline-none">
+						<button type="submit" class="rounded inline-flex items-center focus:outline-none">
+							Create Project
+						</button>
+					</div>
 				</form>
+
+				
 
 			</div>
 		</section>
