@@ -36,9 +36,9 @@
 							</button>
 						</div>
 					</div>
-					<div class="flex p-3 text-white bg-green-500 rounded cursor-pointer text-center text-sm">
+					<div class="p-3 text-white bg-green-500 rounded cursor-pointer text-center text-sm">
 						<button id="new-btn" class="rounded inline-flex items-center focus:outline-none">
-							<span>Add New</span>
+							Add New
 						</button>
 					</div>
 				</div>
@@ -48,39 +48,51 @@
 		<section class="w-full p-4 bg-gray-100">
 			<div id="content" class="w-full h-auto p-4 text-md">
 
-				<form class="border-red-600 border text-center" id="to-do-form">
-					<h3>To do form</h3>
-					<div>
-						<label for="title">Title</label>
-						<input id="title" class="border-red-600 border" type="text" name="first name">
-					</div>
-					<div>
-						<label for="desc">Description</label>
-						<input id="desc" class="border border-red-900" type="text" name="last name">
-					</div>
-					<div>
-						<label for="dueDate">Due Date</label>
-						<input id="dueDate" class="border border-red-900" type="text" name="dueDate">
-					</div>
-					<div>
-						<select name="priorityToDo" id="set-priority">
+				<form id="to-do-form">
+					<label class="block">
+						<span class="text-gray-700">Title</span>
+						<input id="title" class="form-input mt-1 block w-full" name="title">
+					</label>
+	
+					<label class="block mt-2">
+						<span class="text-gray-700">Description</span>
+						<textarea id="desc" class="form-textarea mt-1 block w-full" rows="2" name="description"></textarea>
+					</label>
+	
+					<label class="block mt-3">
+						<span class="text-gray-700 mr-3">Due Date</span>
+						<input type="date" id="dueDate" name="due-date" value="2020-12-21" min="2018-01-01">
+					</label>
+	
+					<label class="block mt-4">
+						<span class="text-gray-700">Priority</span>
+						<select id="set-priority" class="form-select mt-2 block w-full">
 							<option disabled selected value="disabled">Choose priority</option>
 						</select>
-					</div>
-					<div>
-						<label for="notes">Notes</label>
-						<input id="notes" class="border border-red-900" type="text" name="notes">
-					</div>
-					<div>
-						<label for="checkList">Checklist</label>
-						<input id="checkList" class="border border-red-900" type="text" name="checkList">
-					</div>
-					<div>
-						<select name="projectToDo" id="projectToDo">
-
+					</label>
+	
+					<label class="block mt-2">
+						<span class="text-gray-700">Notes</span>
+						<textarea id="notes" class="form-textarea mt-1 block w-full" rows="2" name="notes"></textarea>
+					</label>
+	
+					<label class="block mt-2">
+						<span class="text-gray-700">Checklist</span>
+						<textarea id="checkList" class="form-textarea mt-1 block w-full" rows="2" name="checklist"></textarea>
+					</label>
+	
+					<label class="block mt-2">
+						<span class="text-gray-700">Project?</span>
+						<select class="form-select mt-2 block w-full" name="project-to-do" id="projectToDo">
+	
 						</select>
+					</label>
+
+					<div class="p-3 mt-4 text-white bg-green-500 rounded cursor-pointer text-center text-sm">
+						<button type="submit" class="rounded inline-flex items-center focus:outline-none">
+							Submit
+						</button>
 					</div>
-					<input type="submit" value="Submit">
 				</form>
 
 				<form id="project-form">
