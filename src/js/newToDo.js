@@ -24,6 +24,7 @@ const newToDoItem = () => {
   });
 
   el.toDos.push(toDo);
+  localStorage.setItem('toDos', JSON.stringify(el.toDos));
 };
 
 export { newToDoItem, formProjectData };

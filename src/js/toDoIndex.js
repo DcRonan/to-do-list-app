@@ -17,6 +17,7 @@ const showAndDeleteToDo = () => {
       tableRow.parentNode.removeChild(tableRow);
       if (el.toDos.indexOf(toDo) !== 1) {
         el.toDos.splice(el.toDos.indexOf(toDo), 1);
+        el.numOfTasks.textContent = el.toDos.length;
       }
     });
 
@@ -36,7 +37,6 @@ const showAndDeleteToDo = () => {
       el.noteInput.value = toDo.notes;
       el.checkInput.value = toDo.checkList;
       el.content.appendChild(el.toDoForm);
-      console.log(el.toDos);
     });
 
     tableRow.innerHTML = `<td>${toDo.title}</td><td>${toDo.description}</td><td>${toDo.dueDate}</td><td>${toDo.priority}</td><td>${toDo.notes}</td><td>${toDo.checkList}</td>`;

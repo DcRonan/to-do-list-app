@@ -43,12 +43,14 @@ el.toDoForm.addEventListener('submit', (e) => {
   parent.innerHTML = '';
   parent.appendChild(showAndDeleteToDo());
   el.toDoForm.reset();
+  el.numOfTasks.textContent = el.toDos.length;
 });
 
 el.projectForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const project = new Project(el.projectTitle.value);
   el.projects.push(project);
+  localStorage.setItem('projects', JSON.stringify(el.projects));
   const option = document.createElement('option');
   option.setAttribute('value', project.title);
   option.textContent = project.title;
