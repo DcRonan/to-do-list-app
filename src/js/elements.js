@@ -35,14 +35,7 @@ const addNewBtn = document.querySelector('#new-btn');
 const projectAndTaskBtn = document.querySelector('#project-and-task');
 const numOfTasks = document.querySelector('#num-of-tasks');
 
-const toDo = new newToDoItem(
-  titleInput.value,
-  descInput.value,
-  dueInput.value,
-  'Low',
-  noteInput.value,
-  checkInput.value
-);
+
 
 export {
   toDoForm,
@@ -72,7 +65,6 @@ export {
   openToDos,
   priority,
   getPriority,
-  toDo,
   projectAndTaskBtn,
   addNewBtn,
   numOfTasks
