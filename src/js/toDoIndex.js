@@ -1,5 +1,14 @@
 import * as el from './elements';
 
+const priorityColor = (color) => {
+  if (color === 'Low') {
+    return 'bg-gray-200';
+  } if (color === 'Medium') {
+    return 'bg-yellow-400';
+  }
+  return 'bg-red-700 text-white';
+};
+
 const showAndDeleteToDo = () => {
   const showTable = document.createElement('table');
   showTable.setAttribute('id', 'to-do-list-items');
@@ -37,9 +46,14 @@ const showAndDeleteToDo = () => {
       el.content.appendChild(el.toDoForm);
     });
 
-    tableRow.innerHTML = `<div class="flex justify-between ${priorityColor(
-      toDo.priority
-    )} p-3 rounded-md w-full">
+    const detailsBtn = document.createElement('button');
+    detailsBtn.classList = 'details-btn';
+    detailsBtn.textContent = 'DETAILS!';
+
+    detailsBtn.addEventListener('click', () => {
+      el.content.innerHTML = `<h1>${toDo.title}</h1><p>${toDo.description}</p><p>Due Date: ${toDo.dueDate}</p><p>Priority: ${toDo.priority}</p><p>Notes: ${toDo.notes}</p><p>${toDo.checkList}</p>`;
+    });
+    tableRow.innerHTML = `<div class="flex justify-between ${priorityColor(toDo.priority)} p-3 rounded-md w-full">
     <div class="flex items-center"> 
     <div class="h-4 w-4 mr-3 rounded-sm border border-blue-400"></div>
     <div>${toDo.title}</div>
@@ -55,20 +69,11 @@ const showAndDeleteToDo = () => {
 
     tableRow.appendChild(deleteBtn);
     tableRow.appendChild(editBtn);
+    tableRow.appendChild(detailsBtn);
     showTable.appendChild(tableRow);
   });
 
   return showTable;
-};
-
-const priorityColor = (color) => {
-  if (color === 'Low') {
-    return 'bg-gray-200';
-  } else if (color === 'Medium') {
-    return 'bg-yellow-400';
-  } else {
-    return 'bg-red-700 text-white';
-  }
 };
 
 export default showAndDeleteToDo;
