@@ -17,7 +17,7 @@ const showAndDeleteToDo = () => {
     const tableRow = document.createElement('tr');
     const deleteBtn = document.createElement('button');
     deleteBtn.classList = 'delete-btn';
-    deleteBtn.textContent = 'DELETE!';
+    deleteBtn.textContent = 'Delete';
 
     deleteBtn.addEventListener('click', () => {
       tableRow.parentNode.removeChild(tableRow);
@@ -30,7 +30,7 @@ const showAndDeleteToDo = () => {
 
     const editBtn = document.createElement('button');
     editBtn.classList = 'edit-btn';
-    editBtn.textContent = 'EDIT!';
+    editBtn.textContent = 'Edit';
 
     editBtn.addEventListener('click', () => {
       if (el.toDos.indexOf(toDo) !== 1) {
@@ -47,23 +47,23 @@ const showAndDeleteToDo = () => {
     });
 
     const detailsBtn = document.createElement('button');
-    detailsBtn.classList = 'details-btn';
-    detailsBtn.textContent = 'DETAILS!';
+    detailsBtn.classList = 'border border-none bg-gray-600 text-white rounded-lg duration-300 focus:outline-none p-1 text-sm';
+    deleteBtn.classList = 'border border-none bg-red-500 text-white rounded-lg duration-300 focus:outline-none p-1 text-sm mr-2'
+    editBtn.classList = 'border border-none bg-green-500 text-white rounded-lg duration-300 focus:outline-none p-1 text-sm mr-2'
+    detailsBtn.textContent = 'Info';
 
     detailsBtn.addEventListener('click', () => {
-      el.content.innerHTML = `<h1>${toDo.title}</h1><p>${toDo.description}</p><p>Due Date: ${toDo.dueDate}</p><p>Priority: ${toDo.priority}</p><p>Notes: ${toDo.notes}</p><p>${toDo.checkList}</p>`;
+      el.content.innerHTML = `<h1>${toDo.title}</h1><p>${toDo.description}</p><p>Due Date: ${toDo.dueDate}</p><p>Priority: ${toDo.priority}</p><p>Notes: ${toDo.notes}</p><p>Checklist: ${toDo.checkList}</p>`;
     });
-    tableRow.innerHTML = `<div class="flex justify-between ${priorityColor(toDo.priority)} p-3 rounded-md w-full">
+
+    tableRow.innerHTML = `<div class="flex justify-between mt-2 mb-2 ${priorityColor(toDo.priority)} p-3 rounded-md w-full">
     <div class="flex items-center"> 
     <div class="h-4 w-4 mr-3 rounded-sm border border-blue-400"></div>
     <div>${toDo.title}</div>
     </div>
     <div class="flex items-center"> 
     <div class="mr-3">${toDo.dueDate}</div>
-    <button id="open-todo" type="button"
-    class="border border-none p-1 bg-gray-600 text-white rounded-lg duration-300 focus:outline-none">
-    Info
-  </button>    </div>
+    </div>
   </div>`;
 
 

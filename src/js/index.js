@@ -7,11 +7,14 @@ import newToDoItem from './newToDo';
 
 el.content.removeChild(el.toDoForm);
 el.content.removeChild(el.projectForm);
+el.projectAndTaskBtnDiv.removeChild(el.projectAndTaskBtn);
+
 el.projects.forEach((project) => {
   const option = document.createElement('option');
   option.textContent = project.title;
   el.projectToDo.appendChild(option);
 });
+
 el.numOfTasks.textContent = el.toDos.length;
 
 el.priority.forEach((priority) => {
@@ -24,6 +27,7 @@ el.priority.forEach((priority) => {
 el.addToDo.addEventListener('click', () => {
   el.content.innerHTML = '';
   el.content.appendChild(el.toDoForm);
+  el.projectAndTaskBtnDiv.removeChild(el.projectAndTaskBtn);
 });
 
 el.addProject.addEventListener('click', () => {
@@ -39,6 +43,7 @@ el.listProjects.addEventListener('click', () => {
 
 el.toDoForm.addEventListener('submit', (e) => {
   e.preventDefault();
+  el.content.innerHTML = '';
   newToDoItem();
   let parent = document.createElement('div');
   parent.setAttribute('id', 'to-do-list');
