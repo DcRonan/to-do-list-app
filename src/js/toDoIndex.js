@@ -18,6 +18,7 @@ const showAndDeleteToDo = () => {
       if (el.toDos.indexOf(toDo) !== 1) {
         el.toDos.splice(el.toDos.indexOf(toDo), 1);
         el.numOfTasks.textContent = el.toDos.length;
+        localStorage.setItem('toDos', JSON.stringify(el.toDos));
       }
     });
 
