@@ -15,7 +15,7 @@ el.priority.forEach((priority) => {
   option.setAttribute('value', priority);
   option.textContent = priority;
   el.getPriority.appendChild(option);
-})
+});
 
 el.addToDo.addEventListener('click', () => {
   el.content.innerHTML = '';

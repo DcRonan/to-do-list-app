@@ -22,8 +22,8 @@ const newToDoItem = () => {
       toDo.project = project;
     }
   });
-  
+
   el.toDos.push(toDo);
 };
 
-export {newToDoItem, formProjectData};
+export { newToDoItem, formProjectData };

@@ -20,8 +20,28 @@ const showAndDeleteToDo = () => {
       }
     });
 
+    const editBtn = document.createElement('button');
+    editBtn.classList = 'edit-btn';
+    editBtn.textContent = 'EDIT!';
+
+    editBtn.addEventListener('click', () => {
+      if (el.toDos.indexOf(toDo) !== 1) {
+        el.toDos.splice(el.toDos.indexOf(toDo), 1);
+      }
+      el.content.innerHTML = '';
+      el.titleInput.value = toDo.title;
+      el.descInput.value = toDo.description;
+      el.dueInput.value = toDo.dueDate;
+      el.getPriority.value = toDo.priority;
+      el.noteInput.value = toDo.notes;
+      el.checkInput.value = toDo.checkList;
+      el.content.appendChild(el.toDoForm);
+      console.log(el.toDos);
+    });
+
     tableRow.innerHTML = `<td>${toDo.title}</td><td>${toDo.description}</td><td>${toDo.dueDate}</td><td>${toDo.priority}</td><td>${toDo.notes}</td><td>${toDo.checkList}</td>`;
     tableRow.appendChild(deleteBtn);
+    tableRow.appendChild(editBtn);
     showTable.appendChild(tableRow);
   });
 
