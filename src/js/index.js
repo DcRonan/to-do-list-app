@@ -7,7 +7,7 @@ import { newToDoItem, formProjectData } from './newToDo';
 
 el.content.removeChild(el.toDoForm);
 el.content.removeChild(el.projectForm);
-
+el.projectAndTaskBtnDiv.removeChild(el.projectAndTaskBtn);
 el.numOfTasks.textContent = el.toDos.length;
 
 el.priority.forEach((priority) => {
@@ -21,11 +21,13 @@ el.addToDo.addEventListener('click', () => {
   el.content.innerHTML = '';
   el.content.appendChild(el.toDoForm);
   formProjectData();
+  el.projectAndTaskBtnDiv.removeChild(el.projectAndTaskBtn);
 });
 
 el.addProject.addEventListener('click', () => {
   el.content.innerHTML = '';
   el.content.appendChild(el.projectForm);
+  el.projectAndTaskBtnDiv.removeChild(el.projectAndTaskBtn);
 });
 
 el.listProjects.addEventListener('click', () => {
@@ -62,3 +64,7 @@ el.openToDos.addEventListener('click', () => {
   el.content.innerHTML = '';
   el.content.appendChild(showAndDeleteToDo());
 });
+
+el.addNewBtn.addEventListener('click', () => {
+  el.projectAndTaskBtnDiv.appendChild(el.projectAndTaskBtn);
+})
