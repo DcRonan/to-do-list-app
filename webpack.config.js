@@ -1,6 +1,4 @@
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -13,8 +11,11 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/i,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.css$/i,
+        use: ['style-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'postcss-loader',
+          'sass-loader'],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
