@@ -44,7 +44,7 @@ This app allows you to create tasks and projects, along with being able to edit 
 
 ## Live Demo 🎥
 
-<a href="https://5fe0b0b714a306000886d76e--elated-hawking-b1b1a3.netlify.app/"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+<a href="https://my-to-do-list-app.netlify.app/"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 ## Install ⏳
 
