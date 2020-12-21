@@ -6,7 +6,7 @@ const showProjects = () => {
   el.projects.forEach((project) => {
     const eachProject = document.createElement('li');
     eachProject.addEventListener('click', () => {
-      const projectToDos = el.toDos.filter((toDo) => toDo.project === project);
+      const projectToDos = el.toDos.filter((toDo) => toDo.project.title === project.title);
       const projectToDosDiv = document.createElement('ul');
       projectToDos.forEach((toDo) => {
         const toDoDiv = document.createElement('li');
