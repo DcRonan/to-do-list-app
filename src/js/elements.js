@@ -62,5 +62,5 @@ export {
   projectAndTaskBtn,
   addNewBtn,
   numOfTasks,
-  projectAndTaskBtnDiv
+  projectAndTaskBtnDiv,
 };

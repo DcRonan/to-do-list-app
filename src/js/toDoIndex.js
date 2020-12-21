@@ -48,8 +48,8 @@ const showAndDeleteToDo = () => {
 
     const detailsBtn = document.createElement('button');
     detailsBtn.classList = 'border border-none bg-gray-600 text-white rounded-lg duration-300 focus:outline-none p-1 text-sm';
-    deleteBtn.classList = 'border border-none bg-red-500 text-white rounded-lg duration-300 focus:outline-none p-1 text-sm mr-2'
-    editBtn.classList = 'border border-none bg-green-500 text-white rounded-lg duration-300 focus:outline-none p-1 text-sm mr-2'
+    deleteBtn.classList = 'border border-none bg-red-500 text-white rounded-lg duration-300 focus:outline-none p-1 text-sm mr-2';
+    editBtn.classList = 'border border-none bg-green-500 text-white rounded-lg duration-300 focus:outline-none p-1 text-sm mr-2';
     detailsBtn.textContent = 'Info';
 
     detailsBtn.addEventListener('click', () => {
@@ -65,7 +65,6 @@ const showAndDeleteToDo = () => {
     <div class="mr-3">${toDo.dueDate}</div>
     </div>
   </div>`;
-
 
     tableRow.appendChild(deleteBtn);
     tableRow.appendChild(editBtn);

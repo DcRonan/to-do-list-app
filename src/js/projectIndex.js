@@ -5,7 +5,7 @@ const showProjects = () => {
   const projectUl = document.createElement('ul');
   el.projects.forEach((project) => {
     const eachProject = document.createElement('li');
-    eachProject.classList = 'p-3 rounded-md w-full m-3 bg-gray-300 cursor-pointer duration-300 hover:text-white hover:bg-gray-800'
+    eachProject.classList = 'p-3 rounded-md w-full m-3 bg-gray-300 cursor-pointer duration-300 hover:text-white hover:bg-gray-800';
     eachProject.addEventListener('click', () => {
       const projectToDos = el.toDos.filter((toDo) => toDo.project.title === project.title);
       const projectToDosDiv = document.createElement('ul');
@@ -21,7 +21,7 @@ const showProjects = () => {
         <div class="mr-3">${toDo.dueDate}</div>
         </div>
         </div>`;
-        toDoDiv.classList = 'p-3 rounded-md w-full m-3 bg-gray-300 cursor-pointer'
+        toDoDiv.classList = 'p-3 rounded-md w-full m-3 bg-gray-300 cursor-pointer';
         projectToDosDiv.appendChild(toDoDiv);
       });
       el.content.innerHTML = '';

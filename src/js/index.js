@@ -76,4 +76,4 @@ el.openToDos.addEventListener('click', () => {
 
 el.addNewBtn.addEventListener('click', () => {
   el.projectAndTaskBtnDiv.appendChild(el.projectAndTaskBtn);
-})
+});
