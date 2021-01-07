@@ -1,7 +1,7 @@
 import Project from '../projects';
 
 const newProject = new Project('Study');
-const ProjectTwo = new Project();
+const projectTwo = new Project();
 
 it('checks if Project is defined', () => {
   expect(Project).toBeDefined();
@@ -16,5 +16,5 @@ it('checks if object value is equal', () => {
 });
 
 it("checks if an object's value is undefined", () => {
-  expect(ProjectTwo).toEqual({ title: undefined });
+  expect(projectTwo).toEqual({ title: undefined });
 });
