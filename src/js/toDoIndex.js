@@ -5,11 +5,11 @@ const priorityColor = (color) => {
     return 'bg-gray-200';
   } if (color === 'Medium') {
     return 'bg-yellow-400';
+  } if (color === 'High') {
+    return 'bg-red-700 text-white';
   }
-  return 'bg-red-700 text-white';
+  return null;
 };
-
-module.exports = priorityColor;
 
 const showAndDeleteToDo = () => {
   const showTable = document.createElement('table');
@@ -78,3 +78,4 @@ const showAndDeleteToDo = () => {
 };
 
 export default showAndDeleteToDo;
+export { priorityColor };
