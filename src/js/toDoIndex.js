@@ -9,6 +9,8 @@ const priorityColor = (color) => {
   return 'bg-red-700 text-white';
 };
 
+module.exports = priorityColor;
+
 const showAndDeleteToDo = () => {
   const showTable = document.createElement('table');
   showTable.setAttribute('id', 'to-do-list-items');
