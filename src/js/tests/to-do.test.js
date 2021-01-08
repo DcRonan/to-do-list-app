@@ -6,7 +6,7 @@ const newToDo = new ToDoItem(
   '10/09/2021',
   'Medium',
   'list of dishes',
-  'hoover'
+  'hoover',
 );
 
 const ToDoTwo = new ToDoItem();
