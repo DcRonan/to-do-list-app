@@ -44,7 +44,7 @@ el.listProjects.addEventListener('click', () => {
 el.toDoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   el.content.innerHTML = '';
-  newToDoItem();
+  newToDoItem(el);
   let parent = document.createElement('div');
   parent.setAttribute('id', 'to-do-list');
   el.content.appendChild(parent);
