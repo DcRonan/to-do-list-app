@@ -1,5 +1,3 @@
-import * as el from './elements';
-
 const priorityColor = (color) => {
   if (color === 'Low') {
     return 'bg-gray-200';
@@ -11,7 +9,7 @@ const priorityColor = (color) => {
   return null;
 };
 
-const showAndDeleteToDo = () => {
+const showAndDeleteToDo = (el) => {
   const showTable = document.createElement('table');
   showTable.setAttribute('id', 'to-do-list-items');
   showTable.classList = 'w-full';

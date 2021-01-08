@@ -50,7 +50,7 @@ el.toDoForm.addEventListener('submit', (e) => {
   el.content.appendChild(parent);
   parent = document.querySelector('#to-do-list');
   parent.innerHTML = '';
-  parent.appendChild(showAndDeleteToDo());
+  parent.appendChild(showAndDeleteToDo(el));
   el.toDoForm.reset();
   el.numOfTasks.textContent = el.toDos.length;
 });
@@ -71,7 +71,7 @@ el.projectForm.addEventListener('submit', (e) => {
 
 el.openToDos.addEventListener('click', () => {
   el.content.innerHTML = '';
-  el.content.appendChild(showAndDeleteToDo());
+  el.content.appendChild(showAndDeleteToDo(el));
 });
 
 el.addNewBtn.addEventListener('click', () => {
