@@ -38,19 +38,19 @@ el.addProject.addEventListener('click', () => {
 
 el.listProjects.addEventListener('click', () => {
   el.content.innerHTML = '';
-  showProjects();
+  showProjects(el);
 });
 
 el.toDoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   el.content.innerHTML = '';
-  newToDoItem();
+  newToDoItem(el);
   let parent = document.createElement('div');
   parent.setAttribute('id', 'to-do-list');
   el.content.appendChild(parent);
   parent = document.querySelector('#to-do-list');
   parent.innerHTML = '';
-  parent.appendChild(showAndDeleteToDo());
+  parent.appendChild(showAndDeleteToDo(el));
   el.toDoForm.reset();
   el.numOfTasks.textContent = el.toDos.length;
 });
@@ -66,12 +66,12 @@ el.projectForm.addEventListener('submit', (e) => {
   el.projectToDo.appendChild(option);
   el.projectForm.reset();
   el.content.removeChild(el.projectForm);
-  showProjects();
+  showProjects(el);
 });
 
 el.openToDos.addEventListener('click', () => {
   el.content.innerHTML = '';
-  el.content.appendChild(showAndDeleteToDo());
+  el.content.appendChild(showAndDeleteToDo(el));
 });
 
 el.addNewBtn.addEventListener('click', () => {

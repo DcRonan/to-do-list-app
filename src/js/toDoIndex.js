@@ -1,15 +1,15 @@
-import * as el from './elements';
-
 const priorityColor = (color) => {
   if (color === 'Low') {
     return 'bg-gray-200';
   } if (color === 'Medium') {
     return 'bg-yellow-400';
+  } if (color === 'High') {
+    return 'bg-red-700 text-white';
   }
-  return 'bg-red-700 text-white';
+  return null;
 };
 
-const showAndDeleteToDo = () => {
+const showAndDeleteToDo = (el) => {
   const showTable = document.createElement('table');
   showTable.setAttribute('id', 'to-do-list-items');
   showTable.classList = 'w-full';
@@ -76,3 +76,4 @@ const showAndDeleteToDo = () => {
 };
 
 export default showAndDeleteToDo;
+export { priorityColor };

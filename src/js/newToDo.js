@@ -1,7 +1,6 @@
-import * as el from './elements';
 import ToDoItem from './toDoItems';
 
-const newToDoItem = () => {
+const newToDoItem = (el) => {
   const toDo = new ToDoItem(
     el.titleInput.value,
     el.descInput.value,
