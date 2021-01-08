@@ -38,7 +38,7 @@ el.addProject.addEventListener('click', () => {
 
 el.listProjects.addEventListener('click', () => {
   el.content.innerHTML = '';
-  showProjects();
+  showProjects(el);
 });
 
 el.toDoForm.addEventListener('submit', (e) => {
@@ -66,7 +66,7 @@ el.projectForm.addEventListener('submit', (e) => {
   el.projectToDo.appendChild(option);
   el.projectForm.reset();
   el.content.removeChild(el.projectForm);
-  showProjects();
+  showProjects(el);
 });
 
 el.openToDos.addEventListener('click', () => {

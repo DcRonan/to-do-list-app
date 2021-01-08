@@ -1,6 +1,4 @@
-import * as el from './elements';
-
-const showProjects = () => {
+const showProjects = (el) => {
   const showProjectsDiv = document.createElement('div');
   const projectUl = document.createElement('ul');
   el.projects.forEach((project) => {
