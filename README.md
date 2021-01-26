@@ -15,7 +15,7 @@
 
 ## Description
 
-> In this project we created a To-Do app.
+> In this project, we created a To-Do app.
 
 ![screenshot](./assets/images/main-sc-1.png)
 ![screenshot](./assets/images/main-sc-2.png)
@@ -53,7 +53,7 @@ This app allows you to create tasks and projects, along with being able to edit 
 1. - [ ] Open your `Terminal`
 2. - [ ] Navigate to the directory where you will like to install the repo by running `cd to-do-list-app`
 3. - [ ] Run `git clone git@github.com:DcRonan/to-do-list-app.git` to download <b>or</b> you can download using `HTTPS` by running `git clone https://github.com/DcRonan/to-do-list-app.git` in the terminal
-4. - [ ] Run `cd to-do-list-app` to enter directory
+4. - [ ] Run `cd to-do-list-app` to enter the directory
 5. - [ ] Run `npm i` to install all the packages
 6. - [ ] Run `npm run build` to build the app
 7. - [ ] Go on your preferred `browser` and open `dist/index.html` in the folder directory
@@ -61,10 +61,10 @@ This app allows you to create tasks and projects, along with being able to edit 
 
 ## Testing ⚙
 
-> I have used linters to test my code, which include: [webhint](https://webhint.io/), [eslint](https://eslint.org/) and [stylelint](https://stylelint.io/)
+> I have used linters to test my code, which includes: [webhint](https://webhint.io/), [eslint](https://eslint.org/) and [stylelint](https://stylelint.io/)
 
 1. - [ ] Open `Terminal` again
-2. - [ ] Run `cd ADD-REPO-NAME` to enter directory
+2. - [ ] Run `cd ADD-REPO-NAME` to enter the directory
 3. - [ ] Run `npm test` to start testing
 4. - [ ] All tests will pass ✅
 
